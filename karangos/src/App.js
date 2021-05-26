@@ -28,8 +28,9 @@ import yellow from '@material-ui/core/colors/yellow';
 import pink from '@material-ui/core/colors/pink';
 import { Box } from '@material-ui/core'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import KarangosList from './routed/KarangosList'
+import KarangosList from './routed/KarangosList2'
 import KarangosForm from './routed/KarangosForm'
+//import KarangosClientes from './routed/KarangosClientes'
 
 const theme = createMuiTheme({
   palette: {
@@ -64,6 +65,9 @@ function Main() {
         <TopBar />
         <Box id="routed" className={classes.routed}>
           <Switch>
+            <Route path="/clientes">
+              <KarangosList />
+            </Route>
             <Route path="/list">
               <KarangosList />
             </Route>
